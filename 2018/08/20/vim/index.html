@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Tony" />
+
+
+
+<meta name="description" content="With a great colour scheme and support for auto-complete, git, asdf and sparkup.">
+<meta name="keywords" content="vim,ruby,rails">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ruby&#x2F;Rails centric vimfiles and installer">
+<meta property="og:url" content="http://xiaotong.online/2018/08/20/vim/index.html">
+<meta property="og:site_name" content="xiaotong">
+<meta property="og:description" content="With a great colour scheme and support for auto-complete, git, asdf and sparkup.">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-20T11:38:13.320Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ruby&#x2F;Rails centric vimfiles and installer">
+<meta name="twitter:description" content="With a great colour scheme and support for auto-complete, git, asdf and sparkup.">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="xiaotong" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>Ruby/Rails centric vimfiles and installer | xiaotong</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: 
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.jpg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Tony</a></h1>
+        </hgroup>
+
+        
+
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="/lijia.tong@foxmail.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/user-tony" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rails/">rails</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ruby/">ruby</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vim/">vim</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Tony</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.jpg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Tony</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="/lijia.tong@foxmail.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/user-tony" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-vim" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/08/20/vim/" class="article-date">
+      <time datetime="2018-08-20T11:32:11.326Z" itemprop="datePublished">2018-08-20</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Ruby/Rails centric vimfiles and installer
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/开发工具/">开发工具</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rails/">rails</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ruby/">ruby</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vim/">vim</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h2><p>Vim 8.1.202 or better<br>Tested on MacOS and Linux</p>
+<p>Introduction to Vim:  <a href="http://www.runoob.com/linux/linux-vim.html" target="_blank" rel="noopener">http://www.runoob.com/linux/linux-vim.html</a></p>
+<h2 id="Quick-Install"><a href="#Quick-Install" class="headerlink" title="Quick Install"></a>Quick Install</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mv ~/.vim vim.bak</span><br><span class="line">git <span class="built_in">clone</span> https://github.com/user-tony/vim-config.git</span><br><span class="line">git <span class="built_in">clone</span> VundleVim/Vundle.vim.git ~/.vim/bundle/vundle</span><br></pre></td></tr></table></figure>
+<h2 id="Basic-Mappings"><a href="#Basic-Mappings" class="headerlink" title="Basic Mappings"></a>Basic Mappings</h2><p>The leader is mapped to <code>,</code></p>
+<h3 id="In-Normal-mode-Esc-or-jj"><a href="#In-Normal-mode-Esc-or-jj" class="headerlink" title="In Normal mode (Esc or jj)"></a>In Normal mode (<code>Esc</code> or <code>jj</code>)</h3><p><code>,p</code>     - File browser (NerdTree)</p>
+<p><code>,f</code>     - Find in Files (Command-t)</p>
+<p><code>Space</code>  - Search in buffer</p>
+<p><code>,a</code>     - Search in files (Ack)</p>
+<p><code>,b</code>     - Search open buffers (Fuzzy Finder)</p>
+<p><code>,d</code>     - close buffer</p>
+<p><code>,D</code>     - close all buffers</p>
+<p><code>,Space</code> - Remove search highlighting</p>
+<p><code>,t</code>     - Show tags</p>
+<p><code>//</code>     - Toggle comments (T-Comment)</p>
+<p><code>F5</code>     - Undo history (GUndo)</p>
+<p><code>F6</code>     - Auto format</p>
+<p><code>Tab</code>    - Next buffer</p>
+<p><code>Shift + Tab</code> - Previous buffer</p>
+<p><code>,,</code>     - Toggle between last two buffers</p>
+<p><code>,m</code>     - Jump to model</p>
+<p><code>,v</code>     - Jump to view</p>
+<p><code>,gm</code>    - Find in app/models</p>
+<p><code>,gc</code>    - Find in app/controller</p>
+<p><code>,gv</code>    - Find in app/views</p>
+<p><code>,gr</code>    - Open routes in split</p>
+<p><code>,gg</code>    - Open Gemfile in split</p>
+<p><code>,vir</code>   - Visual select inner Ruby block</p>
+<p><code>,var</code>   - Visual select around Ruby block</p>
+<h3 id="In-Insert-mode-i"><a href="#In-Insert-mode-i" class="headerlink" title="In Insert mode (i)"></a>In Insert mode (<code>i</code>)</h3><p><code>jj</code> - Back to normal mode</p>
+<p><code>&lt;tab&gt;</code> - auto complete or expand snippet</p>
+<p>See <code>.vimrc</code> for more.</p>
+<h2 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h2><h3 id="rails"><a href="#rails" class="headerlink" title="rails"></a>rails</h3><p><em>Lots</em> of stuff - get to know this plugin!</p>
+<p><code>:Rmodel</code> - jump to model</p>
+<p><code>:Rview</code> - jump to view</p>
+<p><code>:help rails</code></p>
+<h3 id="coffee-script"><a href="#coffee-script" class="headerlink" title="coffee-script"></a>coffee-script</h3><p>CoffeeScript support</p>
+<p><code>:CoffeeCompile watch</code> show compiled js in split</p>
+<p><a href="https://github.com/kchmck/vim-coffee-script" target="_blank" rel="noopener">https://github.com/kchmck/vim-coffee-script</a></p>
+<h3 id="ruby-block"><a href="#ruby-block" class="headerlink" title="ruby-block"></a>ruby-block</h3><p>Provides text-objects for Ruby blocks</p>
+<p><code>var</code> (visual around Ruby)</p>
+<p><code>vir</code> (visual inner Ruby)</p>
+<p><code>ar</code> / <code>ir</code> (expand/contract selection)</p>
+<p><code>cir</code> (change inner Ruby)</p>
+<p><code>dar</code> (delete around Ruby)</p>
+<p><a href="http://vimcasts.org/blog/2010/12/a-text-object-for-ruby-blocks/" target="_blank" rel="noopener">http://vimcasts.org/blog/2010/12/a-text-object-for-ruby-blocks/</a></p>
+<h3 id="sparkup-ctrl-e"><a href="#sparkup-ctrl-e" class="headerlink" title="sparkup (ctrl+e)"></a>sparkup (<code>ctrl+e</code>)</h3><p>Expand CSS selectors <code>div.event</code> in to markup <code>&lt;div class=&#39;event&#39;&gt;&lt;/div&gt;</code></p>
+<p><a href="http://net.tutsplus.com/articles/general/quick-tip-even-quicker-markup-with-sparkup/" target="_blank" rel="noopener">http://net.tutsplus.com/articles/general/quick-tip-even-quicker-markup-with-sparkup/</a></p>
+<h3 id="fugitive"><a href="#fugitive" class="headerlink" title="fugitive"></a>fugitive</h3><p>Git integration</p>
+<p><em>Lots</em> of stuff</p>
+<p><code>:Gstatus</code> and press <code>-</code> to stage file</p>
+<p><a href="http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/" target="_blank" rel="noopener">http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/</a></p>
+<p><code>:help fugitive</code></p>
+<h3 id="asdf"><a href="#asdf" class="headerlink" title="asdf"></a>asdf</h3><p><a href="https://github.com/user-tony/asdf" target="_blank" rel="noopener">https://github.com/user-tony/asdf</a></p>
+<h3 id="ctrlP-f"><a href="#ctrlP-f" class="headerlink" title="ctrlP (,f)"></a>ctrlP (<code>,f</code>)</h3><p>Find files in your project with minimal keypresses</p>
+<p>For example <code>conadus</code> would find <code>controllers/admin/users</code></p>
+<p><code>,f path_or_filename</code></p>
+<p><code>,gf path_or_filename</code> - restrict to files in current directory</p>
+<p><code>Ctrl + n</code> - next result</p>
+<p><code>Ctrl + p</code> - previous result</p>
+<p><code>Ctrl + c</code> - cancel</p>
+<h3 id="snipmate-TAB"><a href="#snipmate-TAB" class="headerlink" title="snipmate (TAB)"></a>snipmate (<code>TAB</code>)</h3><p>Snippets, press <code>TAB</code> to expand</p>
+<p>Examples (in a Ruby file):</p>
+<p><code>def&lt;tab&gt;</code></p>
+<p><code>.each&lt;tab&gt;</code></p>
+<p><code>.eado&lt;tab&gt;</code></p>
+<p><code>ife&lt;tab&gt;</code></p>
+<h3 id="gist-Gist"><a href="#gist-Gist" class="headerlink" title="gist (:Gist)"></a>gist (<code>:Gist</code>)</h3><p>Gist current file/selection</p>
+<p>Requires setting GITHUB_TOKEN and GITHUB_USER Env’s</p>
+<h3 id="gundo-F5"><a href="#gundo-F5" class="headerlink" title="gundo (F5)"></a>gundo (<code>F5</code>)</h3><p>Navigate changes history tree </p>
+<p><a href="http://vimcasts.org/episodes/undo-branching-and-gundo-vim/" target="_blank" rel="noopener">http://vimcasts.org/episodes/undo-branching-and-gundo-vim/</a></p>
+<h3 id="tabular"><a href="#tabular" class="headerlink" title="tabular"></a>tabular</h3><p>Align stuff</p>
+<p><a href="http://vimcasts.org/episodes/aligning-text-with-tabular-vim/" target="_blank" rel="noopener">http://vimcasts.org/episodes/aligning-text-with-tabular-vim/</a></p>
+<h3 id="conque"><a href="#conque" class="headerlink" title="conque"></a>conque</h3><p>Terminal/Interactive programs</p>
+<p><code>:Conque zsh</code></p>
+<p><code>:Conque ls</code></p>
+<p>Note you can also drop back to the terminal using Ctrl+Z, to get<br>back to Vim with <code>%1</code>. This is not a feature of Conque.</p>
+<h3 id="tcomment"><a href="#tcomment" class="headerlink" title="tcomment (//)"></a>tcomment (<code>//</code>)</h3><p>Comment/Uncomment stuff out</p>
+<h3 id="yankring"><a href="#yankring" class="headerlink" title="yankring"></a>yankring</h3><p>Shows history of yanked (copied) text</p>
+<p>Pressing <code>ctrl + p</code> will also cycle through paste history</p>
+<h3 id="ack-a"><a href="#ack-a" class="headerlink" title="ack (,a)"></a>ack (<code>,a</code>)</h3><p>Search project for text (aka find in files)</p>
+<p><code>,a word</code></p>
+<p><code>,a &quot;some words&quot;</code></p>
+<h3 id="nerdtree-p"><a href="#nerdtree-p" class="headerlink" title="nerdtree (,p)"></a>nerdtree (<code>,p</code>)</h3><p>Project file browser</p>
+<p><code>,p</code> opens file browser</p>
+<p><code>o</code> / <code>x</code> open and close files/folders</p>
+<p><code>m</code> menu to move/delete/copy files/folders</p>
+<p><code>?</code> Help</p>
+<p>I use nerdtree for creating or moving files, but find command-t quicker for<br>opening files.</p>
+<h3 id="surround-ys-cs-ds"><a href="#surround-ys-cs-ds" class="headerlink" title="surround (ys/cs/ds)"></a>surround (<code>ys</code>/<code>cs</code>/<code>ds</code>)</h3><p>Allows adding/removing/changing of surroundings</p>
+<p>I would highly recommend getting to know this plugin, it is very useful.<br>Especially when you grok text objects.</p>
+<p><em>Characters</em></p>
+<p><code>ysiw)</code>    - surround inner word with <code>()</code></p>
+<p><code>ysiw(</code>    - surround inner word with <code>(  )</code></p>
+<p>In the above example <code>iw</code> can be replaced with any text object or motion.</p>
+<p>If you find yourself manually adding surroundings, stop and work out the<br>correct text object or motion.</p>
+<p><code>cs&quot;&#39;</code>     - change surrounding from <code>&quot;</code> to <code>&#39;</code></p>
+<p><code>ds</code>       - delete surrounding</p>
+<p><em>Tags</em></p>
+<p><code>yss&lt;p&gt;</code>  - surround line in <code>&lt;p&gt;</code> tags</p>
+<p><code>cst&lt;div&gt;</code> - change surround tag to <code>&lt;div&gt;</code></p>
+<h3 id="solarized"><a href="#solarized" class="headerlink" title="solarized"></a>solarized</h3><p>A colour scheme, both light and dark version</p>
+<p><code>:set background=dark</code></p>
+<p><code>:set background=light</code></p>
+<h3 id="fuzzyfinder-b"><a href="#fuzzyfinder-b" class="headerlink" title="fuzzyfinder (,b)"></a>fuzzyfinder (<code>,b</code>)</h3><p>Find open buffer by path/filename</p>
+<h3 id="taglist-l"><a href="#taglist-l" class="headerlink" title="taglist (,l)"></a>taglist (<code>,l</code>)</h3><p>Lists method names, provide auto complete</p>
+<p><code>,rt</code> Generates Ruby tags, this will include tags for your code and gems if<br>using RVM.</p>
+<p>If you are not using RVM you can run <code>ctags -R</code> in project root to generate tags.</p>
+<p>Or to run directly from within vim <code>:!ctags -R</code>.</p>
+<p><code>Ctrl+]</code> - skips to the tag under the cursor</p>
+<h3 id="preview-P"><a href="#preview-P" class="headerlink" title="preview (,P)"></a>preview (<code>,P</code>)</h3><p>Preview markup files such as Markdown and RDoc</p>
+<p>Each format requires the relevant gem to be installed such as <code>bluecloth</code><br>for Markdown and <code>github-markup</code> for RDoc.</p>
+<h3 id="syntastic"><a href="#syntastic" class="headerlink" title="syntastic"></a>syntastic</h3><p>Syntax checking</p>
+<p>When a file is saved the syntax is automatically checked and any errors<br>reported.</p>
+<h3 id="vundle"><a href="#vundle" class="headerlink" title="vundle"></a>vundle</h3><p>Plugin manager and part of the reason why my vimfiles as so compact</p>
+<h3 id="ctrlp-funky"><a href="#ctrlp-funky" class="headerlink" title="ctrlp-funky"></a>ctrlp-funky</h3><p> github:    <a href="https://github.com/tacahiroy/ctrlp-funky" target="_blank" rel="noopener">https://github.com/tacahiroy/ctrlp-funky</a></p>
+<p>A super simple function navigator for ctrlp.vim.<br>For lazy people who cannot wait until ctags finishes.</p>
+<h2 id="INSTALLATION"><a href="#INSTALLATION" class="headerlink" title="INSTALLATION"></a>INSTALLATION</h2><p>Note: If you already have Vim installed ensure it has support for Ruby:</p>
+<pre><code>vim --version | grep ruby
+</code></pre><p>You should see <code>+ruby,</code> if you see <code>-ruby</code> you need to reinstall Vim with Ruby support</p>
+<h3 id="Install-Vim-if-not-already-installed"><a href="#Install-Vim-if-not-already-installed" class="headerlink" title="Install Vim (if not already installed)"></a>Install Vim (if not already installed)</h3><h4 id="MacOS-MacVim-Vim"><a href="#MacOS-MacVim-Vim" class="headerlink" title="MacOS: MacVim / Vim"></a>MacOS: MacVim / Vim</h4><pre><code>brew install macvim --override-system-vim --enable-clipboard
+</code></pre><p>Add <code>/usr/local/bin</code> before <code>/usr/bin</code> in your <code>$PATH</code> so you use the version of<br>vim installed by Homebrew, not the one that comes with MacOS.</p>
+<p>By installing Vim in this way MacVim and regular Vim are exactly the same.</p>
+<h4 id="Ubuntu-gVim-Vim"><a href="#Ubuntu-gVim-Vim" class="headerlink" title="Ubuntu: gVim / Vim"></a>Ubuntu: gVim / Vim</h4><p><em>Server</em></p>
+<pre><code>apt-get install vim-nox
+</code></pre><p><em>Desktop</em></p>
+<pre><code>apt-get install vim-gnome
+</code></pre><h4 id="GNU-Linux-from-source"><a href="#GNU-Linux-from-source" class="headerlink" title="GNU/Linux from source"></a>GNU/Linux from source</h4><p>If you have an old GNU/Linux distro which does not have Vim 7.3 or better in its repos then install from source.</p>
+<p>The configure options below leave out any GUI related features as I have only compiled Vim on a server.</p>
+<p>Vim source is in a hg (Mercurial) repository so you need to install the hg<br>client first, e.g.  <code>sudo apt-get install mercurial</code>.</p>
+<pre><code>hg clone https://vim.googlecode.com/hg/ vim
+cd vim/vim73
+./configure
+./configure --with-features=huge --enable-cscope --enable-pythoninterp --enable-rubyinterp --enable-perlinterp --enable-multibyte
+make
+sudo make install
+</code></pre><p>This installs Vim to <code>/usr/local/bin,</code> check this is in your <code>$PATH</code> before <code>/usr/bin</code> which may contain an older system version of Vim.</p>
+<p>If you get an error <code>no terminal library found</code> install <code>libncurses5-dev</code>.</p>
+<h4 id="To-update-to-the-latest-vimfiles"><a href="#To-update-to-the-latest-vimfiles" class="headerlink" title="To update to the latest vimfiles"></a>To update to the latest vimfiles</h4><pre><code>cd ~/.vim
+rake update
+</code></pre><h4 id="Install-Dependacies"><a href="#Install-Dependacies" class="headerlink" title="Install Dependacies"></a>Install Dependacies</h4><p><em>MacOS</em></p>
+<pre><code>brew install ack
+brew install ctags
+</code></pre><p>Note: MacOS comes with the BSD version of ctags which is not compatible.</p>
+<p><em>Ubuntu</em></p>
+<pre><code>sudo apt-get install exuberant-ctags
+sudo apt-get install ack-grep
+sudo ln -s /usr/bin/ack-grep /usr/local/bin/ack
+</code></pre>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/08/20/vim/">Ruby/Rails centric vimfiles and installer</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Tony</a></p>
+        <p><span>发布时间:</span>2018-08-20, 19:32:11</p>
+        <p><span>最后更新:</span>2018-08-20, 19:38:13</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/08/20/vim/" title="Ruby/Rails centric vimfiles and installer">http://xiaotong.online/2018/08/20/vim/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://xiaotong.online/2018/08/20/vim/　　作者: Tony" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2018/08/20/hello-world/">
+                    Hello World
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Requirements"><span class="toc-number">1.</span> <span class="toc-text">Requirements</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Install"><span class="toc-number">2.</span> <span class="toc-text">Quick Install</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Basic-Mappings"><span class="toc-number">3.</span> <span class="toc-text">Basic Mappings</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#In-Normal-mode-Esc-or-jj"><span class="toc-number">3.1.</span> <span class="toc-text">In Normal mode (Esc or jj)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#In-Insert-mode-i"><span class="toc-number">3.2.</span> <span class="toc-text">In Insert mode (i)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Plugins"><span class="toc-number">4.</span> <span class="toc-text">Plugins</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#rails"><span class="toc-number">4.1.</span> <span class="toc-text">rails</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#coffee-script"><span class="toc-number">4.2.</span> <span class="toc-text">coffee-script</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ruby-block"><span class="toc-number">4.3.</span> <span class="toc-text">ruby-block</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#sparkup-ctrl-e"><span class="toc-number">4.4.</span> <span class="toc-text">sparkup (ctrl+e)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fugitive"><span class="toc-number">4.5.</span> <span class="toc-text">fugitive</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#asdf"><span class="toc-number">4.6.</span> <span class="toc-text">asdf</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ctrlP-f"><span class="toc-number">4.7.</span> <span class="toc-text">ctrlP (,f)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#snipmate-TAB"><span class="toc-number">4.8.</span> <span class="toc-text">snipmate (TAB)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gist-Gist"><span class="toc-number">4.9.</span> <span class="toc-text">gist (:Gist)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#gundo-F5"><span class="toc-number">4.10.</span> <span class="toc-text">gundo (F5)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tabular"><span class="toc-number">4.11.</span> <span class="toc-text">tabular</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#conque"><span class="toc-number">4.12.</span> <span class="toc-text">conque</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tcomment"><span class="toc-number">4.13.</span> <span class="toc-text">tcomment (//)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#yankring"><span class="toc-number">4.14.</span> <span class="toc-text">yankring</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ack-a"><span class="toc-number">4.15.</span> <span class="toc-text">ack (,a)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nerdtree-p"><span class="toc-number">4.16.</span> <span class="toc-text">nerdtree (,p)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#surround-ys-cs-ds"><span class="toc-number">4.17.</span> <span class="toc-text">surround (ys/cs/ds)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#solarized"><span class="toc-number">4.18.</span> <span class="toc-text">solarized</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#fuzzyfinder-b"><span class="toc-number">4.19.</span> <span class="toc-text">fuzzyfinder (,b)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#taglist-l"><span class="toc-number">4.20.</span> <span class="toc-text">taglist (,l)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#preview-P"><span class="toc-number">4.21.</span> <span class="toc-text">preview (,P)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#syntastic"><span class="toc-number">4.22.</span> <span class="toc-text">syntastic</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#vundle"><span class="toc-number">4.23.</span> <span class="toc-text">vundle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ctrlp-funky"><span class="toc-number">4.24.</span> <span class="toc-text">ctrlp-funky</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#INSTALLATION"><span class="toc-number">5.</span> <span class="toc-text">INSTALLATION</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Install-Vim-if-not-already-installed"><span class="toc-number">5.1.</span> <span class="toc-text">Install Vim (if not already installed)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#MacOS-MacVim-Vim"><span class="toc-number">5.1.1.</span> <span class="toc-text">MacOS: MacVim / Vim</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Ubuntu-gVim-Vim"><span class="toc-number">5.1.2.</span> <span class="toc-text">Ubuntu: gVim / Vim</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#GNU-Linux-from-source"><span class="toc-number">5.1.3.</span> <span class="toc-text">GNU/Linux from source</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#To-update-to-the-latest-vimfiles"><span class="toc-number">5.1.4.</span> <span class="toc-text">To update to the latest vimfiles</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Install-Dependacies"><span class="toc-number">5.1.5.</span> <span class="toc-text">Install Dependacies</span></a></li></ol></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"Ruby/Rails centric vimfiles and installer　| xiaotong　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2018/08/20/hello-world/" title="下一篇: Hello World">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/08/20/vim/">Ruby/Rails centric vimfiles and installer</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/20/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2018 Tony
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+    <script src="/js/GithubRepoWidget.js"></script>
+
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+             github: ".github-widget a", 
+            
+            
+             tags: ".article-tag a", 
+             categories: ".article-category a, a.tag-list-link", 
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
